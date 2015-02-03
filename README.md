@@ -3,7 +3,7 @@ All the entertaining functions I have written (most of currently related to nami
 
 # Functions Built So Far:
 
-#### NameThatKid
+#### NameThatKid()
 ##### Description
 This function returns five random names for the gender and decade of your choice.
 ##### Usage
@@ -14,7 +14,7 @@ NameThatKid(gender, decade)
 ##### Example
  NameThatKid('F', 1990)
 
-#### OmgTwins
+#### OmgTwins()
 ##### Description
 This function generates endlessly cutesy pairs of names for twins.
 ##### Usage
