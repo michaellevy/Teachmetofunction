@@ -1,5 +1,5 @@
 # Teachmetofunction
-All the entertaining functions I have written (most of currently related to naming babies) on my rocky learner's journey of writing functions in R.
+All the entertaining functions I have written (all currently related to naming babies) on my rocky learner's journey of writing functions in R.
 
 # Functions Built So Far:
 
