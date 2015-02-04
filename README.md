@@ -14,6 +14,7 @@ NameThatKid(gender, decade)
 ##### Arguments
 * 'gender' (character).  Only options are "M" or "F"
 * 'decade' (integer). Enter any decade between 1880 - 2010.
+
 ##### Example
 ```R 
 NameThatKid('F', 1990)
@@ -28,6 +29,7 @@ OmgTwins(genders, letter)
 ##### Arguments
 * 'genders' (character).  Options are "boys", "girls", or "both".  Anything other than those will return a random guess.
 * 'letter' (character).  Choose the letter of the alphabet you want both names to start with.
+
 ##### Examples
 ```R
  OmgTwins("girls", "H")
