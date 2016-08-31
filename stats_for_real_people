@@ -1,0 +1,69 @@
+What are all the pseudonyms for multilevel modeling?
+
+Bayesian hierarchical models
+hierarchical linear models
+hierarchical modelling
+mixed models
+nested models
+random coefficient models
+random effects models
+random parameter models
+split-plot designs
+subject specific models
+variance component models
+variance heterogeneity
+
+
+
+
+Is the binomial distribution the same as the normal distribution?
+
+ - No, although given enough samples, they sure start to look alike.  A binomial distribution is very different from a normal distribution, and yet if the sample size is large enough, the shapes will be quite similar. The key difference is that a binomial distribution is discrete, not continuous. In other words, it is NOT possible to find a data value between any two data values.
+
+ The confusing thing about the binomial distribution is it's not like other distributions where you can keep a definite picture of it in your head; it changes based on the probabilities involved.  Think of the basketball example; the number of ways you can make different combinations of 6 shots changes based on your probability of making a shot or not.
+
+
+What is a density plot?
+
+
+
+What is the difference in Bayesian and Frequentist approaches to multilevel modeling?
+
+Frequentist approach makes use of maximum likelihood estimation, whereas Bayesian approach uses Monte Carlos Estimation.
+
+
+What is a variance components model?
+
+Variance components models are multilevel models.  Specifically, the term is used to express that they model the sources of variance in a response variable explicitly.
+
+Variants components themselves are exactly what they sound like: the things that cause variance in the thing you’re measuring or modeling.  For example, if you have a bunch of fish and you’re measuring rheotaxis level, the variance components are: variance between fish, and variance within fish.  A one-way “balanced” variance components model would model these two sources of variance explicitly with the equation Yj = mu + Ej + Ecurlyj (http://www.maths.adelaide.edu.au/patty.solomon/EoBII_varcomp.pdf).
+
+Multilevel (mixed, random effects, hierarchichal) models are also variance component models, but with nested effects of variance.  For example, if you test fish rheotaxis across several different treatments, then you would have to model the variance within fish, between fish, and within fish across treatments and between fish across treatments.  This is where intercept and slope parameters come in.  You regard the intercept and slope as responses regressed on individual characteristics, where the magnitudes of the random variation of individual responses about their regression line.  Nearly always, these “random” terms (intercepts and slopes) are allowed to be correlated, so that their variance term (sigma squared) actually denotes the covariance matrix of their intercept and slope itself.
+
+“The key idea is statistical: are we going to treat the levels
+of factors as intrinsically interesting (i.e. as fixed
+effects) or are the factors to be regarded as random
+variables (i.e. as random effects) where interest
+might be in their variances?
+
+The key to variance component analysis is to build
+models that represent different situations and explain
+levels of variability that are plausible approximations
+of what we actually observe.”
+
+
+
+
+
+
+
+Questions for Neil:
+
+1. Using the fish data, what is the difference between a fixed effect and a random effect within the context of these models:
+	a) fixed effects model
+	b) random effects model
+	c) mixed effects model
+	d) generalized linear mixed effects model
+	e) multilevel/hierarchical model
+
+What is longitudinal data?
