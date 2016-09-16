@@ -23,19 +23,31 @@ phone <- function(filename, plot) {
 
 phone(filename = "testphone_rplot2.jpeg", plot = p)
 
+tshirt <- function(filename, plot) {
+  if(class(plot) == "recordedplot"){
+    dev.print(jpeg, file = filename, width = 3300, height = 5100)
+    jpeg(file = filename, width = 3300, height = 5100, quality = 300, units = "px")
+    dev.off()
+  }else{
+    ggsave(filename = filename, plot = plot, width = 431.8, height = 279.4, dpi = 300, units = "mm") 
+  }
+}
 
-dev.print(jpeg, file = "testphone_rplot.jpeg", width = 1300, height = 2000)
-jpeg(file = "testphone_rplot.jpeg", width = 1300, height = 2000, quality = 300, units = "px")
-dev.off()
-df <- data.frame(gp = factor(rep(letters[1:3], each = 10)),
-                 y = rnorm(30))
-g <- ggplot(df, aes(x = gp, y = y)) +
-  geom_point()
-g
+tshirt(filename = "iwillneverfinish_shirt.jpeg", plot = p)
 
-phone(g)
+tshirt_allover <- function(filename, plot) {
+  if(class(plot) == "recordedplot"){
+    dev.print(jpeg, file = filename, width = 6000, height = 6000)
+    jpeg(file = filename, width = 6000, height = 6000, quality = 300, units = "px")
+    dev.off()
+  }else{
+    ggsave(filename = filename, plot = plot, width = 508, height = 508, dpi = 300, units = "mm") 
+  }
+}
 
+tshirt_allover(filename = "iwillnever_allover.jpeg", plot = p)
 
+p
 # adjust y axis:
 
 # Extract Samples from Posterior

@@ -72,6 +72,8 @@ d <- filter(d, Conflict_Year != "Unknown" | PROBLEM_ANIMAL != "Unknown")
 d <- filter(d, PROBLEM_ANIMAL != "")
 
 unique(d$PROBLEM_ANIMAL)
+p <- p + theme(legend.position = "none") + labs(x = NULL, y = NULL)
+p
 
 d$Conflict_Year <- as.numeric(d$Conflict_Year)
 
