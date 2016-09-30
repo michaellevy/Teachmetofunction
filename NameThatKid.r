@@ -13,13 +13,13 @@
 require(dplyr)
 require(babynames)
 
-NameThatKid <- function(gender, decade) {
+NameThatKid <- function(gender, decade, byPop = FALSE, num = 5) {
   a <- babynames %>%
     filter(sex==gender) %>%
     # filter(sex=='M') %>% # for function testing
     mutate(dec = plyr::round_any(year, accuracy=10, f=floor)) %>% # Thanks Noam!
     group_by(dec) %>%
-    sample_n(., 5)
+    sample_n(., num, weight = if(byPop) n else NULL)
   
   b <- a %>%
     filter(dec == decade)
@@ -31,3 +31,4 @@ NameThatKid <- function(gender, decade) {
 
 #Example of use:
 NameThatKid(gender= 'M', decade=1970)
+NameThatKid(gender= 'M', decade=1880, TRUE, 20)
